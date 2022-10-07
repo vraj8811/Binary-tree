@@ -3,6 +3,8 @@
 
 using namespace std;
 
+
+//Representation of Node as a class
 class node {
 public:
     int data;
@@ -17,6 +19,8 @@ public:
     }
 };
 
+
+//Creation of tree
 node* buildtree(node* root)
 {
     int data;
@@ -39,6 +43,8 @@ node* buildtree(node* root)
 
     return root;
 }
+
+//Display a tree
 
 void display(node* root)
 {
@@ -74,6 +80,8 @@ void display(node* root)
     }
 }
 
+
+//Inorder traversal
 void inorder(node* root)
 {
     if (root == NULL)
@@ -84,6 +92,8 @@ void inorder(node* root)
     cout << root->data << " ";
     inorder(root->right);
 }
+
+//preorder traversal
 
 void preorder(node* root)
 {
@@ -96,6 +106,8 @@ void preorder(node* root)
     preorder(root->right);
 }
 
+
+//postorder traversal
 void postorder(node* root)
 {
     if (root == NULL)
@@ -108,6 +120,8 @@ void postorder(node* root)
     cout << root->data << " ";
 }
 
+
+//levelwise sum of leaf node
 void sumatlevel(node* root)
 {
     if (root == NULL)
